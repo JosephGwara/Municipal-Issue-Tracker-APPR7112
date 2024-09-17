@@ -37,15 +37,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(310, 9);
+            label1.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
+            label1.Location = new Point(122, 9);
             label1.Name = "label1";
-            label1.Size = new Size(146, 25);
+            label1.Size = new Size(542, 67);
             label1.TabIndex = 0;
-            label1.Text = "ISSUE REPORTER";
+            label1.Text = "MUNICIPAL SERVICES";
             label1.Click += label1_Click;
             // 
             // reportIssuesBtn
             // 
+            reportIssuesBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             reportIssuesBtn.Location = new Point(224, 234);
             reportIssuesBtn.Name = "reportIssuesBtn";
             reportIssuesBtn.Size = new Size(336, 34);
@@ -56,15 +58,20 @@
             // 
             // logEventsBtn
             // 
+            logEventsBtn.Enabled = false;
+            logEventsBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             logEventsBtn.Location = new Point(224, 309);
             logEventsBtn.Name = "logEventsBtn";
             logEventsBtn.Size = new Size(336, 34);
             logEventsBtn.TabIndex = 2;
             logEventsBtn.Text = "Local Events and Announcements";
             logEventsBtn.UseVisualStyleBackColor = true;
+            logEventsBtn.Click += logEventsBtn_Click;
             // 
             // serviceRequestStatusBtn
             // 
+            serviceRequestStatusBtn.Enabled = false;
+            serviceRequestStatusBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             serviceRequestStatusBtn.Location = new Point(224, 380);
             serviceRequestStatusBtn.Name = "serviceRequestStatusBtn";
             serviceRequestStatusBtn.Size = new Size(336, 34);
@@ -76,14 +83,17 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
             ClientSize = new Size(771, 598);
             Controls.Add(serviceRequestStatusBtn);
             Controls.Add(logEventsBtn);
             Controls.Add(reportIssuesBtn);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            MaximizeBox = false;
             Name = "MainMenu";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Municipality Issue Reports";
+            Text = "Municipal Services";
             Load += MainMenu_Load;
             ResumeLayout(false);
             PerformLayout();

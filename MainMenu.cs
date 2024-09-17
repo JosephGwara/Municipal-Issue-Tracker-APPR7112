@@ -23,5 +23,14 @@ namespace Municipal_Issue_Tracker
             reportIssuesForm.Show();
             Hide();
         }
+
+        private void logEventsBtn_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
+
+
 }
+    
+
