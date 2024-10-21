@@ -58,7 +58,6 @@
             // 
             // logEventsBtn
             // 
-            logEventsBtn.Enabled = false;
             logEventsBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             logEventsBtn.Location = new Point(224, 309);
             logEventsBtn.Name = "logEventsBtn";

@@ -26,7 +26,9 @@ namespace Municipal_Issue_Tracker
 
         private void logEventsBtn_Click(object sender, EventArgs e)
         {
-           
+            LocalEventsAndAnnouncements eventsAndAnnouncements = new LocalEventsAndAnnouncements();
+            eventsAndAnnouncements.Show();
+            Hide();
         }
     }
 
