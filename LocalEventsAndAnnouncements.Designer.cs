@@ -33,18 +33,19 @@
             flowLayoutPanelEvents = new FlowLayoutPanel();
             comboBoxCategory = new ComboBox();
             dateTimePickerEventDate = new DateTimePicker();
+            backBtn = new Button();
             SuspendLayout();
             // 
             // searchBox
             // 
-            searchBox.Location = new Point(51, 21);
+            searchBox.Location = new Point(142, 35);
             searchBox.Name = "searchBox";
             searchBox.Size = new Size(349, 31);
             searchBox.TabIndex = 0;
             // 
             // search_btn
             // 
-            search_btn.Location = new Point(638, 21);
+            search_btn.Location = new Point(729, 35);
             search_btn.Name = "search_btn";
             search_btn.Size = new Size(112, 34);
             search_btn.TabIndex = 1;
@@ -54,7 +55,7 @@
             // 
             // flowLayoutPanelEvents
             // 
-            flowLayoutPanelEvents.Location = new Point(51, 70);
+            flowLayoutPanelEvents.Location = new Point(142, 84);
             flowLayoutPanelEvents.Name = "flowLayoutPanelEvents";
             flowLayoutPanelEvents.Size = new Size(699, 449);
             flowLayoutPanelEvents.TabIndex = 2;
@@ -63,7 +64,7 @@
             // 
             comboBoxCategory.FormattingEnabled = true;
             comboBoxCategory.Items.AddRange(new object[] { "Food", "Technology", "Art", "Music" });
-            comboBoxCategory.Location = new Point(522, 21);
+            comboBoxCategory.Location = new Point(613, 35);
             comboBoxCategory.Name = "comboBoxCategory";
             comboBoxCategory.Size = new Size(110, 33);
             comboBoxCategory.TabIndex = 3;
@@ -71,16 +72,27 @@
             // 
             // dateTimePickerEventDate
             // 
-            dateTimePickerEventDate.Location = new Point(406, 21);
+            dateTimePickerEventDate.Location = new Point(497, 35);
             dateTimePickerEventDate.Name = "dateTimePickerEventDate";
             dateTimePickerEventDate.Size = new Size(110, 31);
             dateTimePickerEventDate.TabIndex = 4;
+            // 
+            // backBtn
+            // 
+            backBtn.Location = new Point(24, 35);
+            backBtn.Name = "backBtn";
+            backBtn.Size = new Size(112, 34);
+            backBtn.TabIndex = 5;
+            backBtn.Text = "Back";
+            backBtn.UseVisualStyleBackColor = true;
+            backBtn.Click += backBtn_Click;
             // 
             // LocalEventsAndAnnouncements
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 619);
+            ClientSize = new Size(884, 619);
+            Controls.Add(backBtn);
             Controls.Add(dateTimePickerEventDate);
             Controls.Add(comboBoxCategory);
             Controls.Add(flowLayoutPanelEvents);
@@ -88,6 +100,7 @@
             Controls.Add(searchBox);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "LocalEventsAndAnnouncements";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Local Events And Announcements";
             Load += LocalEventsAndAnnouncements_Load;
             ResumeLayout(false);
@@ -101,5 +114,6 @@
         private FlowLayoutPanel flowLayoutPanelEvents;
         private ComboBox comboBoxCategory;
         private DateTimePicker dateTimePickerEventDate;
+        private Button backBtn;
     }
 }

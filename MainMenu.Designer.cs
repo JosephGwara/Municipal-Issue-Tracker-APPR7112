@@ -43,7 +43,7 @@
             label1.Size = new Size(542, 67);
             label1.TabIndex = 0;
             label1.Text = "MUNICIPAL SERVICES";
-            label1.Click += label1_Click;
+            label1.Click += Label1_Click;
             // 
             // reportIssuesBtn
             // 
@@ -54,7 +54,7 @@
             reportIssuesBtn.TabIndex = 1;
             reportIssuesBtn.Text = "Report Issues";
             reportIssuesBtn.UseVisualStyleBackColor = true;
-            reportIssuesBtn.Click += button1_Click;
+            reportIssuesBtn.Click += Button1_Click;
             // 
             // logEventsBtn
             // 
@@ -65,11 +65,10 @@
             logEventsBtn.TabIndex = 2;
             logEventsBtn.Text = "Local Events and Announcements";
             logEventsBtn.UseVisualStyleBackColor = true;
-            logEventsBtn.Click += logEventsBtn_Click;
+            logEventsBtn.Click += LogEventsBtn_Click;
             // 
             // serviceRequestStatusBtn
             // 
-            serviceRequestStatusBtn.Enabled = false;
             serviceRequestStatusBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             serviceRequestStatusBtn.Location = new Point(224, 380);
             serviceRequestStatusBtn.Name = "serviceRequestStatusBtn";
@@ -77,6 +76,7 @@
             serviceRequestStatusBtn.TabIndex = 3;
             serviceRequestStatusBtn.Text = "Service Request Status";
             serviceRequestStatusBtn.UseVisualStyleBackColor = true;
+            serviceRequestStatusBtn.Click += ServiceRequestStatusBtn_Click;
             // 
             // MainMenu
             // 

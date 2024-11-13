@@ -12,23 +12,31 @@ namespace Municipal_Issue_Tracker
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             ReportIssuesForm reportIssuesForm = new ReportIssuesForm();
             reportIssuesForm.Show();
             Hide();
         }
 
-        private void logEventsBtn_Click(object sender, EventArgs e)
+        private void LogEventsBtn_Click(object sender, EventArgs e)
         {
             LocalEventsAndAnnouncements eventsAndAnnouncements = new LocalEventsAndAnnouncements();
             eventsAndAnnouncements.Show();
             Hide();
+        }
+
+        private void ServiceRequestStatusBtn_Click(object sender, EventArgs e)
+        {
+            ServiceRequestStatusForm serviceRequestStatusForm = new ServiceRequestStatusForm();
+            serviceRequestStatusForm.Show();
+            Hide();
+
         }
     }
 

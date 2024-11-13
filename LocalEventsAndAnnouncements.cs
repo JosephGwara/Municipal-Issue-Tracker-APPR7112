@@ -16,7 +16,7 @@ namespace Municipal_Issue_Tracker
         public LocalEventsAndAnnouncements()
         {
             InitializeComponent();
-            InitializeEvents(); // Populate the events list
+            InitializeEvents();
             DisplayEvents(events);
         }
 
@@ -26,19 +26,18 @@ namespace Municipal_Issue_Tracker
         }
         private void InitializeEvents()
         {
-            // Add sample events to the list (you can later fetch real events from a database)
+       
             events.Add(new Event("Music Concert", "Music", DateTime.Now.AddDays(2)));
             events.Add(new Event("Art Exhibition", "Art", DateTime.Now.AddDays(5)));
             events.Add(new Event("Tech Conference", "Technology", DateTime.Now.AddDays(7)));
             events.Add(new Event("Food Festival", "Food", DateTime.Now.AddDays(3)));
-            // Add more events as necessary...
         }
         private void DisplayEvents(List<Event> eventsToDisplay)
         {
-            // Clear previous controls
+         
             flowLayoutPanelEvents.Controls.Clear();
 
-            // Dynamically create and add controls for each event
+         
             foreach (var ev in eventsToDisplay)
             {
                 Panel eventPanel = new Panel
@@ -84,12 +83,19 @@ namespace Municipal_Issue_Tracker
             string category = comboBoxCategory.SelectedItem?.ToString() ?? string.Empty;
             DateTime selectedDate = dateTimePickerEventDate.Value.Date;
 
-            // Search events based on category and date
+           
             var filteredEvents = events.Where(ev =>
                 (string.IsNullOrEmpty(category) || ev.Category == category) &&
                 (ev.Date.Date == selectedDate || selectedDate == DateTime.MinValue)).ToList();
 
             DisplayEvents(filteredEvents);
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show(this);
+            Hide();
         }
     }
 }
