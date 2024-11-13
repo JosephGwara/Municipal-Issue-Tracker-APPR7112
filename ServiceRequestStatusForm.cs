@@ -31,15 +31,33 @@ namespace Municipal_Issue_Tracker
             var request1 = new ServiceRequest(1, "Road repair needed", "Pending");
             var request2 = new ServiceRequest(2, "Water leakage", "In Progress");
             var request3 = new ServiceRequest(3, "Garbage collection", "Completed");
+            var request4 = new ServiceRequest(4, "Tree Felling", "Pending");
+            var request5 = new ServiceRequest(5, "Pothole Repair", "In Progress");
+            var request6 = new ServiceRequest(6, "Grass Cutting", "Completed");
+            var request7 = new ServiceRequest(7, "Electric box repair", "Pending");
+            var request8 = new ServiceRequest(8, "Garbage Collection", "In Progress");
+            var request9 = new ServiceRequest(9, "Garbage collection", "Completed");
 
-           
+
             bst.Insert(request1);
             bst.Insert(request2);
             bst.Insert(request3);
+            bst.Insert(request4);
+            bst.Insert(request5);
+            bst.Insert(request6);
+            bst.Insert(request7);
+            bst.Insert(request8);
+            bst.Insert(request9);
 
             minHeap.Insert(request1);
             minHeap.Insert(request2);
             minHeap.Insert(request3);
+            minHeap.Insert(request4);
+            minHeap.Insert(request5);
+            minHeap.Insert(request6);
+            minHeap.Insert(request7);
+            minHeap.Insert(request8);
+            minHeap.Insert(request9);
         }
         private void InitializeDataGridView()
         {
